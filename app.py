@@ -7,11 +7,12 @@ import math
 
 
 # Sphere Test Function
-def sphere(x):
+def a(x):
     return sum(x ** 2)
 
 
-def rastrigin(x):
+# Rastrigin Test Function
+def b(x):
     fitness = 10 * len(x)
     for i in range(len(x)):
         fitness += x[i] ** 2 - (10 * math.cos(2*math.pi*x[i]))
@@ -23,18 +24,21 @@ max = [5.12] * 30
 
 # Problem Definition
 problem = structure()
-problem.costfunc = rastrigin
+# Change value between a and b to change the fitness function
+problem.costfunc = a
 # problem.nvar = 5
 # problem.varmin = [-10, -10, -1, -5,  4]
 # problem.varmax = [ 10,  10,  1,  5, 10]
-
+# Total dimensionality
 problem.nvar = 30
 problem.varmin = min
 problem.varmax = max
 
 # GA Parameters
 params = structure()
+#  Mx number of iteration
 params.maxit = 1000
+# Total population size
 params.npop = 100
 params.beta = 1
 params.pc = 1
