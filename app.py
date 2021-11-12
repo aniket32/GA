@@ -5,6 +5,7 @@ import ga
 import random
 import math
 
+print("Hello World")
 
 # Sphere Test Function
 def a(x):
