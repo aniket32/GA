@@ -6,6 +6,8 @@ import random
 import math
 
 
+print("Hello")
+
 # Sphere Test Function
 def a(x):
     return sum(x ** 2)
